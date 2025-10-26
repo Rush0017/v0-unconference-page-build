@@ -1,14 +1,12 @@
 "use client"
 
-import type React from "react"
-import { createClient } from "@/lib/supabase/client"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useState } from "react"
 
 interface RSVPFormData {
   email: string
@@ -31,29 +29,27 @@ export function RSVPForm() {
     topics_of_interest: "",
   })
 
-  const supabase = createClient()
-
+  // TODO: Replace this with your actual API Gateway endpoint
+  const API_URL = "https://jiw1wex4v1.execute-api.us-east-2.amazonaws.com/submitRSVP"
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
     setSubmitting(true)
     setError(null)
 
     try {
-      const rsvpData = {
-        email: formData.email,
-        name: formData.name,
-        status: "attending",
-        school: formData.school || null,
-        school_year: formData.school_year,
-        topics_of_interest: formData.topics_of_interest || null,
+      console.log(formData)
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      console.log(res,'response')
+      if (!res.ok) {
+        const errorText = await res.text()
+        throw new Error(errorText || "Failed to submit RSVP")
       }
 
-      const { error } = await supabase.from("rsvps").insert(rsvpData)
-      if (error) throw error
-
       setSuccess(true)
-      // Reset form after successful submission
       setFormData({
         email: "",
         name: "",
@@ -63,7 +59,7 @@ export function RSVPForm() {
       })
       setTimeout(() => setSuccess(false), 5000)
     } catch (error: unknown) {
-      setError(error instanceof Error ? error.message : "An error occurred")
+      setError(error instanceof Error ? error.message : "An unknown error occurred")
     } finally {
       setSubmitting(false)
     }
