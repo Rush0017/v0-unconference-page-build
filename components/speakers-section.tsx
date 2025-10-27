@@ -57,12 +57,6 @@ const speakers = [
     organization: "UW-Madison BTC Club",
     role: "Head of Operations at Bitcoin Culture Hub",
   },
-  {
-    name: "Preston Pysh",
-    title: "General Partner",
-    organization: "Ego Death Capital",
-    role: "Co-founder of The Investor's Podcast Network",
-  },
 ]
 
 export function SpeakersSection() {
