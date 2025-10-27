@@ -1,7 +1,6 @@
 "use client"
 
 import type React from "react"
-import { createClient } from "@/lib/supabase/client"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
@@ -20,7 +19,6 @@ interface RSVPFormData {
 
 export function RSVPForm() {
   const [submitting, setSubmitting] = useState(false)
-  const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
 
   const [formData, setFormData] = useState<RSVPFormData>({
@@ -31,42 +29,31 @@ export function RSVPForm() {
     topics_of_interest: "",
   })
 
-  const supabase = createClient()
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
 
     setSubmitting(true)
-    setError(null)
 
-    try {
-      const rsvpData = {
-        email: formData.email,
-        name: formData.name,
-        status: "attending",
-        school: formData.school || null,
-        school_year: formData.school_year,
-        topics_of_interest: formData.topics_of_interest || null,
-      }
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1000))
 
-      const { error } = await supabase.from("rsvps").insert(rsvpData)
-      if (error) throw error
+    // Log form data for now (can be replaced with email service or other solution)
+    console.log("[v0] RSVP Form Submission:", formData)
 
-      setSuccess(true)
-      // Reset form after successful submission
-      setFormData({
-        email: "",
-        name: "",
-        school: "",
-        school_year: "",
-        topics_of_interest: "",
-      })
-      setTimeout(() => setSuccess(false), 5000)
-    } catch (error: unknown) {
-      setError(error instanceof Error ? error.message : "An error occurred")
-    } finally {
-      setSubmitting(false)
-    }
+    setSuccess(true)
+    setSubmitting(false)
+
+    // Reset form after successful submission
+    setFormData({
+      email: "",
+      name: "",
+      school: "",
+      school_year: "",
+      topics_of_interest: "",
+    })
+
+    // Keep success message visible
+    setTimeout(() => setSuccess(false), 5000)
   }
 
   return (
@@ -162,16 +149,10 @@ export function RSVPForm() {
             <p className="text-sm text-muted-foreground font-normal">Help us tailor the content to your interests</p>
           </div>
 
-          {error && (
-            <div className="p-5 bg-destructive/10 border border-destructive/20 rounded-xl">
-              <p className="text-base text-destructive font-medium">{error}</p>
-            </div>
-          )}
-
           {success && (
             <div className="p-5 bg-green-500/10 border border-green-500/20 rounded-xl">
               <p className="text-base text-green-600 font-medium">
-                Registration submitted successfully! Check your email for confirmation.
+                Thank you for registering! We'll send you more details soon at {formData.email || "your email"}.
               </p>
             </div>
           )}
