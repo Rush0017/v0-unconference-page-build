@@ -1,13 +1,12 @@
 "use client"
 
-import type React from "react"
+import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
-import { useState } from "react"
 
 interface RSVPFormData {
   email: string
@@ -19,6 +18,7 @@ interface RSVPFormData {
 
 export function RSVPForm() {
   const [submitting, setSubmitting] = useState(false)
+  const [error, setError] = useState<string | null>(null)
   const [success, setSuccess] = useState(false)
 
   const [formData, setFormData] = useState<RSVPFormData>({
@@ -29,31 +29,40 @@ export function RSVPForm() {
     topics_of_interest: "",
   })
 
+  // TODO: Replace this with your actual API Gateway endpoint
+  const API_URL = "https://jiw1wex4v1.execute-api.us-east-2.amazonaws.com/submitRSVP"
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-
     setSubmitting(true)
+    setError(null)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      console.log(formData)
+      const res = await fetch(API_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
+      })
+      console.log(res, 'response')
+      if (!res.ok) {
+        const errorText = await res.text()
+        throw new Error(errorText || "Failed to submit RSVP")
+      }
 
-    // Log form data for now (can be replaced with email service or other solution)
-    console.log("[v0] RSVP Form Submission:", formData)
-
-    setSuccess(true)
-    setSubmitting(false)
-
-    // Reset form after successful submission
-    setFormData({
-      email: "",
-      name: "",
-      school: "",
-      school_year: "",
-      topics_of_interest: "",
-    })
-
-    // Keep success message visible
-    setTimeout(() => setSuccess(false), 5000)
+      setSuccess(true)
+      setFormData({
+        email: "",
+        name: "",
+        school: "",
+        school_year: "",
+        topics_of_interest: "",
+      })
+      setTimeout(() => setSuccess(false), 5000)
+    } catch (error: unknown) {
+      setError(error instanceof Error ? error.message : "An unknown error occurred")
+    } finally {
+      setSubmitting(false)
+    }
   }
 
   return (
@@ -149,10 +158,16 @@ export function RSVPForm() {
             <p className="text-sm text-muted-foreground font-normal">Help us tailor the content to your interests</p>
           </div>
 
+          {error && (
+            <div className="p-5 bg-destructive/10 border border-destructive/20 rounded-xl">
+              <p className="text-base text-destructive font-medium">{error}</p>
+            </div>
+          )}
+
           {success && (
             <div className="p-5 bg-green-500/10 border border-green-500/20 rounded-xl">
               <p className="text-base text-green-600 font-medium">
-                Thank you for registering! We'll send you more details soon at {formData.email || "your email"}.
+                Registration submitted successfully! Check your email for confirmation.
               </p>
             </div>
           )}
