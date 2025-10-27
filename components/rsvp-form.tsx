@@ -1,5 +1,7 @@
 "use client"
 
+import type React from "react"
+
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -29,8 +31,8 @@ export function RSVPForm() {
     topics_of_interest: "",
   })
 
-  // TODO: Replace this with your actual API Gateway endpoint
   const API_URL = "https://jiw1wex4v1.execute-api.us-east-2.amazonaws.com/submitRSVP"
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setSubmitting(true)
@@ -43,7 +45,7 @@ export function RSVPForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       })
-      console.log(res, 'response')
+      console.log(res, "response")
       if (!res.ok) {
         const errorText = await res.text()
         throw new Error(errorText || "Failed to submit RSVP")
