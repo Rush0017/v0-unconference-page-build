@@ -118,7 +118,7 @@ const speakers = [
     title: "General Partner",
     organization: "Ego Death Capital",
     role: "Co-Founder, The Investors Podcast Network",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/preston-pysh-6L7zLcOCc3O2Oi4DxLjv5Pcp00jkYC.webp",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3978-hC0H4sUwfMafzjOawcBXuL3Nt2I1Yd.jpeg",
   },
   {
     name: "Bradley Rettler",
