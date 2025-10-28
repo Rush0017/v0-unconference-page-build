@@ -136,7 +136,7 @@ export function EventPhaseContent() {
             <div className="space-y-3">
               <p className="text-2xl font-semibold text-white">Lifelong Learning with Bitcoin</p>
               <p className="text-lg text-[#C4D5CC] max-w-2xl mx-auto leading-relaxed font-normal">
-                A new frontier of learning and belonging. Explore crypto through culture, knowledge, and connection.
+                A new frontier of learning and belonging. Explore Bitcoin through culture, knowledge, and connection.
               </p>
             </div>
           </div>
