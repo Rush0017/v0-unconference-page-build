@@ -89,9 +89,9 @@ const speakers = [
   },
   {
     name: "Sean Mihelich",
-    title: "Founder & President",
-    organization: "UW-Madison BTC Club",
-    role: "Head of Operations at Bitcoin Culture Hub",
+    title: "Head of Operations",
+    organization: "Bitcoin Culture Hub",
+    role: "Founder & President, UW-Madison Bitcoin Club",
   },
   {
     name: "Salvador Pineda",
