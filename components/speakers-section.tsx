@@ -128,6 +128,13 @@ const speakers = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1744825870303-9RlpDh7w1kjGenZRken3lDoK6Gh31V.jpg",
   },
   {
+    name: "Sabina",
+    title: "Co-founder",
+    organization: "Tando",
+    role: "",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3977-bhZ0dpwWFJEJZgojxFi0G6gi6eYkp4.jpeg",
+  },
+  {
     name: "Nicki Sharma",
     title: "Founder and Host",
     organization: "Orange Peel Podcast",
