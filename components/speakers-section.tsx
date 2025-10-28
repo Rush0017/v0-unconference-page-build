@@ -13,12 +13,10 @@ const speakers = [
   },
   {
     name: "Jeff Booth",
-    title: "General Advisor",
-    organization: "Bitcoin Students Network",
-    role: "Founding Partner, Ego Death Capital",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/jeff%20headshot-zu9PZEWrq0qCWXEz6pmmhiI148gaHX.avif",
-    imagePosition: "center 60%",
+    title: "Founding Partner",
+    organization: "Ego Death Capital",
+    role: "General Advisor, Bitcoin Students Network",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4504-9dtyMSqO2VdWKOoLfomYdixk4g7ETU.jpeg",
   },
   {
     name: "Natalie Brunell",
