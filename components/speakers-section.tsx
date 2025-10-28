@@ -156,6 +156,13 @@ const speakers = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1663957597651-EJiVeiJRvcMRJemg9zuuebWjviojaV.jpg",
   },
   {
+    name: "Zach Cohen",
+    title: "Associate",
+    organization: "Bitcoin Policy Institute",
+    role: "Host, The Bitcoin Policy Hour",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3975-uSprb8GrlZ68SUPBKSK356jDWtzLZv.png",
+  },
+  {
     name: "David Zell",
     title: "President",
     organization: "Bitcoin Policy Institute",
