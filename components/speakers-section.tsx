@@ -104,7 +104,7 @@ const speakers = [
     title: "Managing Partner",
     organization: "Ten31 VC",
     role: "Co-Founder, OpenSats and Bitcoin Park",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/odell-0rrhOGgnzPe25Dgmb0SAjA1AXjn3CE.webp",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4505-yastyJD8uamgyIZoHSeLGAhNARLLEw.jpeg",
   },
   {
     name: "Salvador Pineda",
