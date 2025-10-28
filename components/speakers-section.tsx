@@ -128,7 +128,7 @@ const speakers = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1744825870303-9RlpDh7w1kjGenZRken3lDoK6Gh31V.jpg",
   },
   {
-    name: "Sabina",
+    name: "Sabina Waithira",
     title: "Co-founder",
     organization: "Tando",
     role: "",
