@@ -4,22 +4,16 @@ import { Users } from "lucide-react"
 
 const speakers = [
   {
+    name: "Andrew Bailey",
+    title: "Professor of Humanities (Philosophy)",
+    organization: "Yale-NUS College",
+    role: "Board Member, Bitcoin Students Network",
+  },
+  {
     name: "Jeff Booth",
     title: "General Advisor",
     organization: "Bitcoin Students Network",
     role: "Founding Partner, Ego Death Capital",
-  },
-  {
-    name: "Preston Pysh",
-    title: "General Partner",
-    organization: "Ego Death Capital",
-    role: "Co-Founder, The Investors Podcast Network",
-  },
-  {
-    name: "Matt Odell",
-    title: "Managing Partner",
-    organization: "Ten31 VC",
-    role: "Co-Founder, OpenSats and Bitcoin Park",
   },
   {
     name: "Natalie Brunell",
@@ -28,46 +22,10 @@ const speakers = [
     role: "Bitcoin Educator and Journalist",
   },
   {
-    name: "Abubakar Nur Khalil",
-    title: "CEO",
-    organization: "Btrust",
-    role: "Board Member, Bitcoin Students Network",
-  },
-  {
-    name: "Adam Jonas",
-    title: "CEO",
-    organization: "Chaincode Labs",
-    role: "",
-  },
-  {
-    name: "David Zell",
-    title: "President",
-    organization: "Bitcoin Policy Institute",
-    role: "",
-  },
-  {
-    name: "Lisa Neigut",
-    title: "Founder",
-    organization: "Base58",
-    role: "Organizer, Bitcoin++ conference series",
-  },
-  {
-    name: "Ishaana Misra",
-    title: "Bitcoin Core Contributor",
-    organization: "MIT",
-    role: "Co-Founder, Generation Bitcoin",
-  },
-  {
-    name: "Andrew Bailey",
-    title: "Professor of Humanities (Philosophy)",
-    organization: "Yale-NUS College",
-    role: "Board Member, Bitcoin Students Network",
-  },
-  {
-    name: "Bradley Rettler",
-    title: "Associate Professor of Philosophy",
-    organization: "University of Wyoming",
-    role: "Coauthor of Resistance Money",
+    name: "Arman Dashti",
+    title: "Economics & Data Science Student",
+    organization: "Claremont McKenna College",
+    role: "Founder, Claremont Bitcoin Club",
   },
   {
     name: "Ella Hough",
@@ -76,16 +34,28 @@ const speakers = [
     role: "Bitcoin Advocacy Associate at Strategy",
   },
   {
-    name: "Arsh Molu",
-    title: "Co-Founder",
-    organization: "Bitcoin Students Network",
-    role: "Financial Freedom Operations Lead at Human Rights Foundation",
+    name: "Adam Jonas",
+    title: "CEO",
+    organization: "Chaincode Labs",
+    role: "",
+  },
+  {
+    name: "Blake Kaufman",
+    title: "Creator and Builder",
+    organization: "Blitz Wallet",
+    role: "",
+  },
+  {
+    name: "Abubakar Nur Khalil",
+    title: "CEO",
+    organization: "Btrust",
+    role: "Board Member, Bitcoin Students Network",
   },
   {
     name: "Kyle Knight",
     title: "Founder",
     organization: "Bitcoin Culture Hub",
-    role: "Built student-Bitcoin culture initiatives including UCLA's Bitcoin Bruins and a campus Bitcoin summit",
+    role: "Founder, UCLA Bitcoin Bruins",
   },
   {
     name: "Sean Mihelich",
@@ -94,9 +64,57 @@ const speakers = [
     role: "Founder & President, UW-Madison Bitcoin Club",
   },
   {
+    name: "Ishaana Misra",
+    title: "Bitcoin Core Contributor",
+    organization: "MIT",
+    role: "Co-Founder, Generation Bitcoin",
+  },
+  {
+    name: "Arsh Molu",
+    title: "Co-Founder",
+    organization: "Bitcoin Students Network",
+    role: "Financial Freedom Operations Lead at Human Rights Foundation",
+  },
+  {
+    name: "Lisa Neigut",
+    title: "Founder",
+    organization: "Base58",
+    role: "Organizer, Bitcoin++ conference series",
+  },
+  {
+    name: "Matt Odell",
+    title: "Managing Partner",
+    organization: "Ten31 VC",
+    role: "Co-Founder, OpenSats and Bitcoin Park",
+  },
+  {
     name: "Salvador Pineda",
     title: "Researcher on Bitcoin and Transitional Justice",
     organization: "Cornell University",
+    role: "",
+  },
+  {
+    name: "Preston Pysh",
+    title: "General Partner",
+    organization: "Ego Death Capital",
+    role: "Co-Founder, The Investors Podcast Network",
+  },
+  {
+    name: "Bradley Rettler",
+    title: "Associate Professor of Philosophy",
+    organization: "University of Wyoming",
+    role: "Co-author of Resistance Money",
+  },
+  {
+    name: "Nicki Sharma",
+    title: "Founder and Host",
+    organization: "Orange Peel Podcast",
+    role: "University of Melbourne student",
+  },
+  {
+    name: "Halston Valencia",
+    title: "Bitcoin Educator and Gen Z Advocate",
+    organization: "USC Graduate",
     role: "",
   },
   {
@@ -106,33 +124,15 @@ const speakers = [
     role: "",
   },
   {
-    name: "Arman Dashti",
-    title: "Economics & Data Science Student",
-    organization: "Claremont McKenna College",
-    role: "Founder, Claremont Bitcoin Club",
-  },
-  {
-    name: "Halston Valencia",
-    title: "Bitcoin Educator and Gen Z Advocate",
-    organization: "USC Graduate",
-    role: "",
-  },
-  {
     name: "Zach Young",
     title: "Analyst",
     organization: "Trammell Venture Partners",
     role: "",
   },
   {
-    name: "Nicki Sharma",
-    title: "Founder and Host",
-    organization: "Orange Peel Podcast",
-    role: "University of Melbourne student",
-  },
-  {
-    name: "Blake Kaufman",
-    title: "Creator and Builder",
-    organization: "Blitz Wallet",
+    name: "David Zell",
+    title: "President",
+    organization: "Bitcoin Policy Institute",
     role: "",
   },
 ]
