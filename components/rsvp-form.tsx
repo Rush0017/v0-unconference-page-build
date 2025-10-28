@@ -98,7 +98,7 @@ export function RSVPForm() {
             <Input
               id="email"
               type="email"
-              placeholder="your.email@university.edu"
+              placeholder="your.email@example.com"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
               required
@@ -138,8 +138,7 @@ export function RSVPForm() {
                 <SelectItem value="junior">Junior</SelectItem>
                 <SelectItem value="senior">Senior</SelectItem>
                 <SelectItem value="graduate">Graduate Student</SelectItem>
-                <SelectItem value="recent_grad">Recent Graduate</SelectItem>
-                <SelectItem value="alumni">Alumni</SelectItem>
+                <SelectItem value="professional">Professional</SelectItem>
                 <SelectItem value="other">Other</SelectItem>
               </SelectContent>
             </Select>
