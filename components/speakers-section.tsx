@@ -95,7 +95,7 @@ const speakers = [
     name: "Lisa Neigut",
     title: "Founder",
     organization: "Base58",
-    role: "Organizer, Bitcoin++ conference series",
+    role: "Board Member, BSN",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1617074837380-XQpkfIBNXoks7XtE59o0rLhQ5Zm2QO.jpg",
     imagePosition: "40% center",
   },
