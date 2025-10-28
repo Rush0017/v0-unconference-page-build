@@ -5,9 +5,9 @@ import { Users } from "lucide-react"
 const speakers = [
   {
     name: "Jeff Booth",
-    title: "Founding Partner",
-    organization: "Ego Death Capital",
-    role: "Author of The Price of Tomorrow",
+    title: "General Advisor",
+    organization: "Bitcoin Students Network",
+    role: "Founding Partner, Ego Death Capital",
   },
   {
     name: "Preston Pysh",
@@ -29,27 +29,27 @@ const speakers = [
   },
   {
     name: "Abubakar Nur Khalil",
-    title: "Bitcoin Core Contributor",
+    title: "CEO",
     organization: "Btrust",
-    role: "Board Member",
+    role: "Board Member, Bitcoin Students Network",
   },
   {
     name: "Adam Jonas",
-    title: "Head of Special Projects",
+    title: "CEO",
     organization: "Chaincode Labs",
-    role: "Cohost, The Chaincode Podcast",
+    role: "",
   },
   {
     name: "David Zell",
-    title: "Co-Founder & Co-President",
+    title: "President",
     organization: "Bitcoin Policy Institute",
     role: "",
   },
   {
-    name: "Niftynei",
+    name: "Lisa Neigut",
     title: "Founder",
     organization: "Base58",
-    role: "Core Lightning Contributor; bitcoin++ Conference Lead",
+    role: "Organizer, Bitcoin++ conference series",
   },
   {
     name: "Ishaana Misra",
@@ -58,10 +58,10 @@ const speakers = [
     role: "Co-Founder, Generation Bitcoin",
   },
   {
-    name: "Andrew M. Bailey",
+    name: "Andrew Bailey",
     title: "Professor of Humanities (Philosophy)",
     organization: "Yale-NUS College",
-    role: "Coauthor of Resistance Money",
+    role: "Board Member, Bitcoin Students Network",
   },
   {
     name: "Bradley Rettler",
@@ -121,7 +121,7 @@ const speakers = [
     name: "Zach Young",
     title: "Analyst",
     organization: "Trammell Venture Partners",
-    role: "Bitcoin-Native VC Fund",
+    role: "",
   },
   {
     name: "Nicki Sharma",
