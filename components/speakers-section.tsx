@@ -149,7 +149,7 @@ export function SpeakersSection() {
           Gen Z Pioneers & Industry Leaders
         </h2>
         <p className="text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto leading-relaxed font-normal">
-          Learn from the pioneers building the future of Bitcoin education and adoption
+          Learn from the pioneers shaping the future of Bitcoin
         </p>
       </div>
 
