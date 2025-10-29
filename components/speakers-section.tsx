@@ -26,6 +26,13 @@ const speakers = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1740021423436-A6PJEZZXuBYMO0A6ySnZ0VzLKrZXsQ.jpg",
   },
   {
+    name: "Troy Cross",
+    title: "Professor of Philosophy & Humanities",
+    organization: "Reed College",
+    role: "Fellow, Bitcoin Policy Institute",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1626739600155-6QilkFhqEYdnR2avx9X5RrRoO5SD4O.jpg",
+  },
+  {
     name: "Arman Dashti",
     title: "Founder",
     organization: "Claremont Bitcoin Club",
@@ -143,17 +150,10 @@ const speakers = [
   },
   {
     name: "Halston Valencia",
-    title: "Bitcoin Educator and Gen Z Advocate",
-    organization: "USC Graduate",
-    role: "",
+    title: "Marketing Director",
+    organization: "Bitcoin Well",
+    role: "Bitcoin Educator",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1752103064372-FdGo5Q4ixtPDuGB4YEo3kiSXKzK7Tx.jpg",
-  },
-  {
-    name: "Matthew Vuk",
-    title: "Researcher",
-    organization: "Second (Ark Protocol L2 implementation)",
-    role: "",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1734731693088-3wKTyRDaLhYboKgsBxId5xWnx5lgNN.jpg",
   },
   {
     name: "Zach Young",
