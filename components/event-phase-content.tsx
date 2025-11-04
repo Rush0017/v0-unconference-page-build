@@ -11,7 +11,7 @@ const config = {
   event_title: "Bitcoin Students Network Summit",
   event_date: "November 21, 2025",
   event_location: "Virtual",
-  event_time: "12 PM - 3 PM ET",
+  event_time: "12 PM - 4 PM ET",
   event_tagline: "Connecting academia to the opportunity of Bitcoin",
   rsvp_enabled: true,
 }

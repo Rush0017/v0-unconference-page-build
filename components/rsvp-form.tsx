@@ -72,7 +72,7 @@ export function RSVPForm() {
       <CardHeader className="space-y-3 pb-8">
         <CardTitle className="text-3xl font-bold">Register for the Summit</CardTitle>
         <CardDescription className="text-lg font-normal">
-          Join us on November 21, 2025 • 12 PM - 3 PM ET
+          Join us on November 21, 2025 • 12 PM - 4 PM ET
         </CardDescription>
       </CardHeader>
       <CardContent>

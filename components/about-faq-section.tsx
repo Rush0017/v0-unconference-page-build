@@ -31,7 +31,7 @@ const faqs: FAQItem[] = [
   {
     question: "How can I get involved or partner?",
     answer:
-      "After the Summit, we'll share ways to join regional programs or collaborate on initiatives. You can also email kyle@bitcoinculturehub.com.",
+      "After the Summit, we'll share ways to join regional programs or collaborate on initiatives. You can also email bitcoinculturehub@gmail.com.",
   },
 ]
 
@@ -104,7 +104,7 @@ export function AboutFAQSection() {
                       <Clock className="w-6 h-6 text-primary flex-shrink-0" />
                       <div>
                         <div className="text-xs text-muted-foreground font-semibold uppercase tracking-wider">Time</div>
-                        <div className="font-bold text-base mt-1">12 PM–3 PM ET</div>
+                        <div className="font-bold text-base mt-1">12 PM–4 PM ET</div>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">

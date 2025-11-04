@@ -135,6 +135,14 @@ const speakers = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1744825870303-9RlpDh7w1kjGenZRken3lDoK6Gh31V.jpg",
   },
   {
+    name: "Michael Rihani",
+    title: "Head of Crypto",
+    organization: "Nubank",
+    role: "General Advisor, Bitcoin Students Network",
+    image:
+      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/da7d1ea9002d4015b146a0be25b4dc7f-5DPvXrtARtio1ounSg8PIgPK72EgSv.avif",
+  },
+  {
     name: "Sabina Waithira",
     title: "Co-founder",
     organization: "Tando",
@@ -146,36 +154,35 @@ const speakers = [
     title: "Founder and Host",
     organization: "Orange Peel Podcast",
     role: "University of Melbourne student",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1744274730497-LyHFHofxKM1ospWKZ5AumKqzKS9SPn.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/55x0N.jpg",
   },
   {
     name: "Halston Valencia",
     title: "Marketing Director",
     organization: "Bitcoin Well",
     role: "Bitcoin Educator",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1752103064372-FdGo5Q4ixtPDuGB4YEo3kiSXKzK7Tx.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/rxXB5.jpg",
   },
   {
     name: "Zach Young",
     title: "Analyst",
     organization: "Trammell Venture Partners",
     role: "",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1663957597651-EJiVeiJRvcMRJemg9zuuebWjviojaV.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ZOfoH.jpg",
   },
   {
     name: "Zach Cohen",
     title: "Associate",
     organization: "Bitcoin Policy Institute",
     role: "Host, The Bitcoin Policy Hour",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3975-uSprb8GrlZ68SUPBKSK356jDWtzLZv.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pv6WU.png",
   },
   {
     name: "David Zell",
     title: "President",
     organization: "Bitcoin Policy Institute",
     role: "",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/62a7743d9e37b5ab927e022b_David%20Zell-NZdjpZbgqBRXx6s3jyS1INzHyFMM63.jpg",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hZoxO.jpg",
   },
 ]
 

@@ -9,7 +9,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "Bitcoin Students Network Summit - November 21, 2025",
   description:
-    "Join the Bitcoin Students Network Summit on November 21, 2025 from 12 PM - 3 PM ET. A free virtual event connecting students with Bitcoin industry leaders. Powered by Bitcoin Culture Hub.",
+    "Join the Bitcoin Students Network Summit on November 21, 2025 from 12 PM - 4 PM ET. A free virtual event connecting students with Bitcoin industry leaders. Powered by Bitcoin Culture Hub.",
   generator: "v0.app",
 }
 
