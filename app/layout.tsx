@@ -1,10 +1,19 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { GeistSans } from "geist/font/sans"
-import { GeistMono } from "geist/font/mono"
+import { Geist, Geist_Mono } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import { Suspense } from "react"
 import "./globals.css"
+
+const geistSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-geist-sans",
+})
+
+const geistMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-geist-mono",
+})
 
 export const metadata: Metadata = {
   title: "Bitcoin Students Network Summit - November 21, 2025",
@@ -20,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans antialiased ${GeistSans.variable} ${GeistMono.variable}`}>
+      <body className={`font-sans antialiased ${geistSans.variable} ${geistMono.variable}`}>
         <Suspense fallback={null}>{children}</Suspense>
         <Analytics />
       </body>

@@ -1,188 +1,152 @@
 "use client"
 
 import { Users } from "lucide-react"
-import Image from "next/image"
+import { useState } from "react"
 
 const speakers = [
   {
     name: "Andrew Bailey",
-    title: "Professor of Humanities (Philosophy)",
-    organization: "Yale-NUS College",
-    role: "Board Member, Bitcoin Students Network",
+    bio: "Professor of Humanities (Philosophy), Yale-NUS College; Board Member, Bitcoin Students Network",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1756640022348-tqOGwZjxqjWK998OoCBwws9wiP62ks.jpg",
   },
   {
     name: "Jeff Booth",
-    title: "Founding Partner",
-    organization: "Ego Death Capital",
-    role: "General Advisor, Bitcoin Students Network",
+    bio: "Founding Partner, Ego Death Capital; General Advisor, Bitcoin Students Network",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4504-9dtyMSqO2VdWKOoLfomYdixk4g7ETU.jpeg",
   },
   {
     name: "Natalie Brunell",
-    title: "Host and Founder",
-    organization: "Coin Stories",
-    role: "Bitcoin Educator and Journalist",
+    bio: "Host and Founder, Coin Stories; Bitcoin Educator and Journalist",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1740021423436-A6PJEZZXuBYMO0A6ySnZ0VzLKrZXsQ.jpg",
   },
   {
     name: "Troy Cross",
-    title: "Professor of Philosophy & Humanities",
-    organization: "Reed College",
-    role: "Fellow, Bitcoin Policy Institute",
+    bio: "Professor of Philosophy & Humanities, Reed College; Fellow, Bitcoin Policy Institute",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1626739600155-6QilkFhqEYdnR2avx9X5RrRoO5SD4O.jpg",
   },
   {
     name: "Arman Dashti",
-    title: "Founder",
-    organization: "Claremont Bitcoin Club",
-    role: "Economics & Data Science Student, Claremont McKenna College",
+    bio: "Founder, Claremont Bitcoin Club; Economics & Data Science Student, Claremont McKenna College",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1731361114189-2Bqmhs4APoHrXZ2cSb4ZDu7cBfdXGl.jpg",
   },
   {
     name: "Ella Hough",
-    title: "Co-Founder",
-    organization: "Bitcoin Students Network",
-    role: "Bitcoin Advocacy Associate at Strategy",
+    bio: "Co-Founder, Bitcoin Students Network; Bitcoin Advocacy Associate at Strategy",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1710883451075-KmctyOOYpsH6uTesEMxV1IWip95iF4.jpg",
   },
   {
     name: "Adam Jonas",
-    title: "CEO",
-    organization: "Chaincode Labs",
-    role: "",
+    bio: "CEO, Chaincode Labs",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1517598054229-rV9MONN4avCAE0qNIy8u9QjQ70JqXD.jpg",
   },
   {
     name: "Blake Kaufman",
-    title: "Creator and Builder",
-    organization: "Blitz Wallet",
-    role: "",
+    bio: "Creator and Builder, Blitz Wallet",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1643141640764-Hk9WoxDqsNS8ILrX4B3NekPPSlBJGb.jpg",
   },
   {
     name: "Abubakar Nur Khalil",
-    title: "CEO",
-    organization: "Btrust",
-    role: "Board Member, Bitcoin Students Network",
+    bio: "CEO, Btrust; Board Member, Bitcoin Students Network",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1722875880760-onCRTBfCXPDVmecAGCTpojIm6a5McD.jpg",
   },
   {
     name: "Kyle Knight",
-    title: "Founder",
-    organization: "Bitcoin Culture Hub",
-    role: "Founder, UCLA Bitcoin Bruins",
+    bio: "Founder, Bitcoin Culture Hub; Founder, UCLA Bitcoin Bruins",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1740949028805-f2uAE2RJZMgUcy0KTjNPdUmSltvSKv.jpg",
   },
   {
     name: "Sean Mihelich",
-    title: "Head of Operations",
-    organization: "Bitcoin Culture Hub",
-    role: "Founder & President, UW-Madison Bitcoin Club",
-    image:
-      "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1761073961788%20%281%29-SC7boeLc87xVzb0mclB0TKVlgj3kb1.jpg",
+    bio: "Head of Business Development, Bitcoin Culture Hub; Founder & President, Wisconsin Bitcoin Club",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-WlQBLrnBX91sqqZOIl0uUOFIRRfkNz.png",
   },
   {
     name: "Ishaana Misra",
-    title: "Bitcoin Core Contributor",
-    organization: "MIT",
-    role: "Co-Founder, Generation Bitcoin",
+    bio: "Bitcoin Core Contributor, MIT; Co-Founder, Generation Bitcoin",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Screen%2BShot%2B2023-03-10%2Bat%2B7.30.03%2BPM-z7OjGrf8nTYlLIhuYYozaCGTy8hou6.webp",
   },
   {
     name: "Arsh Molu",
-    title: "Co-Founder",
-    organization: "Bitcoin Students Network",
-    role: "Financial Freedom Operations Lead at Human Rights Foundation",
+    bio: "Co-Founder, Bitcoin Students Network; Financial Freedom Operations Lead at Human Rights Foundation",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Profile-Arsh-Molu-V1-StaH3XySQEI1uVks2f2xU2rJkIEqmq.webp",
   },
   {
     name: "Lisa Neigut",
-    title: "Founder",
-    organization: "Base58",
-    role: "Board Member, BSN",
+    bio: "Founder, Base58; Board Member, BSN",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1617074837380-XQpkfIBNXoks7XtE59o0rLhQ5Zm2QO.jpg",
     imagePosition: "40% center",
   },
   {
     name: "Matt Odell",
-    title: "Managing Partner",
-    organization: "Ten31 VC",
-    role: "Co-Founder, OpenSats and Bitcoin Park",
+    bio: "Managing Partner, Ten31 VC; Co-Founder, OpenSats and Bitcoin Park",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_4505-yastyJD8uamgyIZoHSeLGAhNARLLEw.jpeg",
   },
   {
     name: "Salvador Pineda",
-    title: "Researcher on Bitcoin and Transitional Justice, MBA Candidate",
-    organization: "Cornell University",
-    role: "",
+    bio: "Researcher on Bitcoin and Transitional Justice, MBA Candidate, Cornell University",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1730684659212-cIvRHwyZsSRVEELD6bHt0hOIaIIQ9v.jpg",
   },
   {
     name: "Preston Pysh",
-    title: "General Partner",
-    organization: "Ego Death Capital",
-    role: "Co-Founder, The Investors Podcast Network",
+    bio: "General Partner, Ego Death Capital; Co-Founder, The Investors Podcast Network",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3978-hC0H4sUwfMafzjOawcBXuL3Nt2I1Yd.jpeg",
   },
   {
     name: "Bradley Rettler",
-    title: "Associate Professor of Philosophy",
-    organization: "University of Wyoming",
-    role: "Co-author of Resistance Money",
+    bio: "Associate Professor of Philosophy, University of Wyoming; Co-author of Resistance Money",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1744825870303-9RlpDh7w1kjGenZRken3lDoK6Gh31V.jpg",
   },
   {
     name: "Michael Rihani",
-    title: "Head of Crypto",
-    organization: "Nubank",
-    role: "General Advisor, Bitcoin Students Network",
+    bio: "Head of Crypto, Nubank; General Advisor, Bitcoin Students Network",
     image:
       "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/da7d1ea9002d4015b146a0be25b4dc7f-5DPvXrtARtio1ounSg8PIgPK72EgSv.avif",
   },
   {
     name: "Sabina Waithira",
-    title: "Co-founder",
-    organization: "Tando",
-    role: "",
+    bio: "Co-founder, Tando",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3977-bhZ0dpwWFJEJZgojxFi0G6gi6eYkp4.jpeg",
   },
   {
     name: "Nicki Sharma",
-    title: "Founder and Host",
-    organization: "Orange Peel Podcast",
-    role: "University of Melbourne student",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/55x0N.jpg",
+    bio: "Founder and Host, Orange Peel Podcast; University of Melbourne student",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-2vpLVBa8cadHAKsvShltKBpzbGPn0m.png",
   },
   {
     name: "Halston Valencia",
-    title: "Marketing Director",
-    organization: "Bitcoin Well",
-    role: "Bitcoin Educator",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/rxXB5.jpg",
+    bio: "Marketing Director, Bitcoin Well; Bitcoin Educator",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-q8nXgl5y8BubfRBnH72UiUQYIwHxPS.png",
   },
   {
     name: "Zach Young",
-    title: "Analyst",
-    organization: "Trammell Venture Partners",
-    role: "",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/ZOfoH.jpg",
+    bio: "Analyst, Trammell Venture Partners",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-7fThedsXeshxHFc9UWsVfPUpd4Vm2Q.png",
   },
   {
-    name: "Zach Cohen",
-    title: "Associate",
-    organization: "Bitcoin Policy Institute",
-    role: "Host, The Bitcoin Policy Hour",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Pv6WU.png",
+    name: "Zack Cohen",
+    bio: "Associate, Bitcoin Policy Institute; Host, The Bitcoin Policy Hour",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-yvrNzRv4HI0woLGnhPqIcpQuhZkrdU.png",
   },
   {
     name: "David Zell",
-    title: "President",
-    organization: "Bitcoin Policy Institute",
-    role: "",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/hZoxO.jpg",
+    bio: "President, Bitcoin Policy Institute",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-AEdPHnUj0XesLEmDIRdpdswKYk1SuG.png",
+  },
+  {
+    name: "Demian Schatt",
+    bio: "Head of Operations, The Bitcoin Layer; Founder and President, USC Bitcoin Club",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-pGeKmkoqm9byltPVmto1kO5dM2zsy6.png",
+  },
+  {
+    name: "Shehzan Maredia",
+    bio: "Founder and CEO, Lava",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-hj8s5zEkSSna7UB6Zoy4ZoJJcxr2YJ.png",
+  },
+  {
+    name: "Anaïse Kanimba",
+    bio: "Global development strategist and human rights advocate; Founding Member, World Liberty Congress",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vMHWRJz6uii56aIYF690ul8KVGVGYf.png",
   },
 ]
 
@@ -204,63 +168,44 @@ export function SpeakersSection() {
 
       <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
         {speakers.map((speaker, index) => (
-          <div
-            key={index}
-            className="group bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]"
-          >
-            <div className="space-y-5">
-              {speaker.image ? (
-                <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-lg">
-                  <Image
-                    src={speaker.image || "/placeholder.svg"}
-                    alt={`${speaker.name} headshot`}
-                    fill
-                    className="object-cover"
-                    style={speaker.imagePosition ? { objectPosition: speaker.imagePosition } : undefined}
-                  />
-                </div>
-              ) : (
-                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-2xl font-bold shadow-lg">
-                  {speaker.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </div>
-              )}
-
-              <div className="space-y-3">
-                <h3 className="text-xl font-bold text-[#002E1E] group-hover:text-primary transition-colors">
-                  {speaker.name}
-                </h3>
-                <div className="space-y-2 text-sm">
-                  {speaker.title && (
-                    <p className="text-primary font-semibold leading-snug">
-                      {speaker.title}
-                      {speaker.organization && (
-                        <>
-                          ,{" "}
-                          {speaker.organization === "Bitcoin Students Network" ? (
-                            <a
-                              href="https://www.bitcoinstudentnetwork.org/"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="hover:underline transition-all"
-                            >
-                              {speaker.organization}
-                            </a>
-                          ) : (
-                            speaker.organization
-                          )}
-                        </>
-                      )}
-                    </p>
-                  )}
-                  {speaker.role && <p className="text-gray-600 font-normal leading-snug">{speaker.role}</p>}
-                </div>
-              </div>
-            </div>
-          </div>
+          <SpeakerCard key={index} speaker={speaker} />
         ))}
+      </div>
+    </div>
+  )
+}
+
+function SpeakerCard({ speaker }: { speaker: (typeof speakers)[0] }) {
+  const [imageError, setImageError] = useState(false)
+
+  return (
+    <div className="group bg-white rounded-2xl p-8 border-2 border-gray-100 hover:border-primary/30 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)]">
+      <div className="space-y-5">
+        {speaker.image && !imageError ? (
+          <div className="relative w-20 h-20 rounded-full overflow-hidden shadow-lg">
+            <img
+              src={speaker.image || "/placeholder.svg"}
+              alt={`${speaker.name} headshot`}
+              className="w-full h-full object-cover"
+              style={speaker.imagePosition ? { objectPosition: speaker.imagePosition } : undefined}
+              onError={() => setImageError(true)}
+            />
+          </div>
+        ) : (
+          <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+            {speaker.name
+              .split(" ")
+              .map((n) => n[0])
+              .join("")}
+          </div>
+        )}
+
+        <div className="space-y-3">
+          <h3 className="text-xl font-bold text-[#002E1E] group-hover:text-primary transition-colors">
+            {speaker.name}
+          </h3>
+          <p className="text-sm text-gray-600 leading-relaxed">{speaker.bio}</p>
+        </div>
       </div>
     </div>
   )
