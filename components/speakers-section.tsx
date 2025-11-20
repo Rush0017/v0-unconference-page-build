@@ -88,11 +88,6 @@ const speakers = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1730684659212-cIvRHwyZsSRVEELD6bHt0hOIaIIQ9v.jpg",
   },
   {
-    name: "Preston Pysh",
-    bio: "General Partner, Ego Death Capital; Co-Founder, The Investors Podcast Network",
-    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_3978-hC0H4sUwfMafzjOawcBXuL3Nt2I1Yd.jpeg",
-  },
-  {
     name: "Bradley Rettler",
     bio: "Associate Professor of Philosophy, University of Wyoming; Co-author of Resistance Money",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1744825870303-9RlpDh7w1kjGenZRken3lDoK6Gh31V.jpg",
@@ -148,7 +143,73 @@ const speakers = [
     bio: "Global development strategist and human rights advocate; Founding Member, World Liberty Congress",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vMHWRJz6uii56aIYF690ul8KVGVGYf.png",
   },
+  {
+    name: "Nik Bhatia",
+    bio: "Founder of The Bitcoin Layer; Adjunct Professor of Finance, USC Marshall School of Business",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-cPX35RJSL2nWBe4wwB0RMlm0vWIYLA.png"
+  },
+  {
+    name: "Luke Danielian",
+    bio: "Intern, Bitcoin Policy Institute; Student, University of Maryland",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-vQHvJFagFHQcJfbgZY85HQ2frEA8uH.png"
+  },
+  {
+    name: "Filip Djurovic",
+    bio: "Founder of Bitcoin Club; Student at Rochester Institute of Technology",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-HgRk4j4brQ7qgNqt7uoxhRyuuUhcwA.png"
+  },
+  {
+    name: "Janie England",
+    bio: "Student at BYU-Idaho; Intern with Senator Cynthia Lummis and Bitcoin Policy Institute",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-6f5mKIXPhz2eRXkiMf79Z4Tp78tYJ4.png"
+  },
+  {
+    name: "Lucas Ferreira",
+    bio: "Co-founder and Executive Director, Vinteum; Organizer, Satsconf",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-j7dLKrvEw9Px7Zns3fMnntNPG2DcYZ.png"
+  },
+  {
+    name: "Fabian Kraus",
+    bio: "Intern: Summer of Bitcoin; studied under Rene Pickhart",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-i7fURbcJu4eqwz3BQvm1x2ZQDwpKap.png"
+  },
+  {
+    name: "Jack Mallers",
+    bio: "Founder and CEO of Strike, Twenty One",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-d6s5UaB8oObJ1fuSR9Ukl0oHaofyoC.png"
+  },
+  {
+    name: "Lorraine Marcel",
+    bio: "Founder of Bitcoin Dada; Financial activist empowering African women",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-QtEsGbkpBassl1JOnDf16Q8zrntq1f.png"
+  },
+  {
+    name: "Pedro Merino",
+    bio: "Cofounder of Bitcoin Students Network ITAM",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-XFRjJVcf1TkvlAvboxbTfoBEBVxdTP.png"
+  },
+  {
+    name: "Neha Narula",
+    bio: "Director, Digital Currency Initiative, MIT Media Lab; Board Member, Block",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-mldqgndEVtle7B2ykUh8nqLceIS8Cc.png"
+  },
+  {
+    name: "Francesco Pelle",
+    bio: "President, BitPolito",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-3ZWm82c9osfobwf2rud1zt0C34fL71.png"
+  },
+  {
+    name: "Anna Stenstrom",
+    bio: "Fellow at University of Alabama; Bitcoin Policy Advocate intern at BPI",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-M1KFPMthtdnwXRoXS3T0wRT6vYiunf.png"
+  },
+  {
+    name: "Matthew Vuk",
+    bio: "Ark liquidity researcher, Second; Economics & Accounting student; BSN member",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-wGEDWLRrsKqDH714OIlzXf0ypZqlxo.png"
+  }
 ]
+const sortedSpeakers = speakers.sort((a, b) => a.name.localeCompare(b.name));
 
 export function SpeakersSection() {
   return (
@@ -167,7 +228,7 @@ export function SpeakersSection() {
       </div>
 
       <div className="flex flex-wrap justify-center gap-8 max-w-7xl mx-auto">
-        {speakers.map((speaker, index) => (
+        {sortedSpeakers.map((speaker, index) => (
           <SpeakerCard key={index} speaker={speaker} />
         ))}
       </div>
