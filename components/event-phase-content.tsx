@@ -5,6 +5,7 @@ import { AboutFAQSection } from "@/components/about-faq-section"
 import { RSVPForm } from "@/components/rsvp-form"
 import { SpeakersSection } from "@/components/speakers-section"
 import { Calendar, Clock, Globe } from "lucide-react"
+import { SummitVideo } from "./summit-video"
 
 const config = {
   event_phase: "pre-event",
@@ -92,7 +93,11 @@ export function EventPhaseContent() {
           </div>
         </div>
       </section>
-
+      <section id="about-section" className="bg-white py-32 md:py-40 scroll-mt-20">
+        <div className="container mx-auto px-6 max-w-7xl">
+          <SummitVideo />
+        </div>
+      </section>
       <section id="about-section" className="bg-white py-32 md:py-40 scroll-mt-20">
         <div className="container mx-auto px-6 max-w-7xl">
           <AboutFAQSection />
